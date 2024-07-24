@@ -2,17 +2,19 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './components/Home';
-import Register from './components/Register';
-import Admin from './components/Admin';
+import Students from './components/Students';
+import Attendance from './components/Attendance';
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/admin" element={<Admin />} />
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" component={Home} />
+          <Route path="/students" component={Students} />
+          <Route path="/attendance" component={Attendance} />  
+        </Routes>
+      </div>
     </Router>
   );
 }

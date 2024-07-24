@@ -1,4 +1,44 @@
-/* import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+function Attendance() {
+  const [attendance, setAttendance] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/attendance')
+      .then(response => {
+        setAttendance(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching attendance:', error);
+      });
+  }, []);
+
+  return (
+    <div>
+      <h1>Attendance</h1>
+      <ul>
+        {attendance.map(record => (
+          <li key={record._id}>{record.name} - {record.time}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default Attendance;
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Admin() {
@@ -52,7 +92,7 @@ function Admin() {
   );
 }
 
-export default Admin; */
+export default Admin; 
 
 
 
@@ -130,7 +170,7 @@ function Admin() {
       {editMode && (
         <div className="edit-form">
           <h3>Edit Form</h3>
-          {/* Example editable form */}
+          {// Example editable form }
           <input type="text" value={editData.name} onChange={(e) => setEditData({...editData, name: e.target.value})} />
           <input type="text" value={editData.email} onChange={(e) => setEditData({...editData, email: e.target.value})} />
           <button onClick={handleSave}>Save</button>
@@ -140,4 +180,4 @@ function Admin() {
   );
 }
 
-export default Admin;
+export default Admin; */
