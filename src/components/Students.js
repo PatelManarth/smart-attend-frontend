@@ -5,7 +5,7 @@ function Students() {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/students')
+    axios.get('http://localhost:8000/students')
       .then(response => {
         setStudents(response.data);
       })
@@ -27,6 +27,7 @@ function Students() {
 }
 
 export default Students;
+
 
 
 

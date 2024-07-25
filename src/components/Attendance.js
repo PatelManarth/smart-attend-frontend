@@ -5,7 +5,7 @@ function Attendance() {
   const [attendance, setAttendance] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/attendance')
+    axios.get('http://localhost:8000/attendance')
       .then(response => {
         setAttendance(response.data);
       })
@@ -27,6 +27,7 @@ function Attendance() {
 }
 
 export default Attendance;
+
 
 
 
