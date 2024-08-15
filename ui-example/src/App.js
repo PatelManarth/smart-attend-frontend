@@ -9,9 +9,9 @@ function App() {
   var authEndpoint = 'https://smart-attend-auth-endpoint-dedf0223a758.herokuapp.com/'
   var config = {
       videoSDKJWT: '',
-      sessionName: 'test',
+      sessionName: 'Smart-Attend',
       userName: 'React',
-      sessionPasscode: '123',
+      sessionPasscode: '1234',
       features: ['video', 'audio', 'settings', 'users', 'chat', 'share']
   };
   var role = 1
@@ -62,8 +62,8 @@ function App() {
     <div className="App">
       <main>
         <div id="join-flow">
-          <h1>Zoom Video SDK Sample React</h1>
-          <p>User interface offered by the Video SDK UI Toolkit</p>
+          <h1>Smart-Attend</h1>
+          <p>Trial Meeting</p>
 
           <button onClick={getVideoSDKJWT}>Join Session</button>
         </div>

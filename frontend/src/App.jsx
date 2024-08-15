@@ -1,22 +1,24 @@
+// src/app.jsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
-import StudentHome from './components/StudentHome';
-import FacultyHome from './components/FacultyHome';
-import MeetingScheduler from './components/MeetingScheduler';
-import Attendance from './components/Attendance';
-import './App.css';
+import StudentHome from './components/StudentHome';  // Assuming you have these components
+import FacultyHome from './components/FacultyHome';  // Assuming you have these components
+import AdminPortal from './components/AdminPortal';  
 
-const App = () => (
-  <Router>
-    <Switch>
-      <Route path="/" exact component={Login} />
-      <Route path="/student-home" component={StudentHome} />
-      <Route path="/faculty-home" component={FacultyHome} />
-      <Route path="/schedule-meeting" component={MeetingScheduler} />
-      <Route path="/attendance" component={Attendance} />
-    </Switch>
-  </Router>
-);
+function App() {
+  return (
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/student-home" element={<StudentHome />} />
+          <Route path="/faculty-home" element={<FacultyHome />} />
+          <Route path="/admin-portal" element={<AdminPortal />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
 export default App;
