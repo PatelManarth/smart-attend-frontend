@@ -63,7 +63,7 @@ function App() {
       <main>
         <div id="join-flow">
           <h1>Smart-Attend</h1>
-          <p>Trial Meeting</p>
+          <p>Test-Meeting</p>
 
           <button onClick={getVideoSDKJWT}>Join Session</button>
         </div>
